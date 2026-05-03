@@ -22,3 +22,16 @@ SOL - add a page.tsx in the info folder so that if we info then there must be so
 2nd approach to solve the problem is -
 add two square brackets to handle this thing of rendering [[]]
 now the localhost:3000/info will be handling by page.tsx inside info/[[...folderIds]]
+
+CSR VS SSR
+Client side rendering means rendering happens on the browser or client like happens in react 
+
+Server side rendering means rendering all the things on the server itself and give the response on the client like happens in Nextjs (although it also has CSR)
+
+Static site generation
+some components or files which will be same for everyone and will not change is static
+if anything is inside index.html in app folder then it is static thing which will not re-render.
+For custom static files we have to build it and the html file will be spit out in the .next folder.
+
+Hydration
+static things are rendered or generated on the server side and non static or dynamics will be rendered on the client and there will a checking that the things coming from the server and generated on the client are same or not. If same then it is ok but if it is not same then a hydration error will show up.
